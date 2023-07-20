@@ -1,14 +1,122 @@
-/* Estilos para dispositivos en orientación vertical */
-@media (orientation: portrait) {
-    body {
-      font-size: 16px;
+@media (max-width:1000px){
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        padding-top: 0;
+        margin: 0;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav ul li{
+        margin: 2%;
     }
   }
-  
-  /* Estilos para dispositivos en orientación horizontal */
-  @media (orientation: landscape) {
-    body {
-      font-size: 20px;
+
+@media (max-width:600px) {
+    nav ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
     }
+
+    nav ul li{
+        padding: 0;
+        margin: 2%;
+    }
+
+    #menu {
+        padding-top: 10%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        overflow: hidden;
+        transition: width 0.5s ease;
+        display: flex; /* Utilizamos flexbox para centrar el contenido verticalmente */
+        align-items: center; /* Centramos verticalmente el contenido */
+        justify-content: center; /* Centramos horizontalmente el contenido */
+        z-index: 1;
+        align-items: center;
+      }
+      
+      #menu.show {
+        z-index: 1;
+      }
+      
+      #menu ul {
+        padding: 0;
+        margin: 0;
+        text-align: center; /* Alineamos horizontalmente el contenido de la lista */
+      }
+      
+      #menu ul li {
+        margin: 5%;
+        padding: 14%;
+      }
+      
+      #menu ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+      }
   }
-  
+
+@media (max-width:300px) {
+    nav ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    nav ul li{
+        padding: 0;
+        margin: 2%;
+    }
+
+    #menu {
+        padding-top: 25%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        overflow: hidden;
+        transition: width 0.5s ease;
+        display: flex; /* Utilizamos flexbox para centrar el contenido verticalmente */
+        align-items: center; /* Centramos verticalmente el contenido */
+        justify-content: center; /* Centramos horizontalmente el contenido */
+        z-index: 1;
+        align-items: center;
+      }
+      
+      #menu.show {
+        z-index: 1;
+      }
+      
+      #menu ul {
+        padding: 0;
+        margin: 0;
+        text-align: center; /* Alineamos horizontalmente el contenido de la lista */
+      }
+      
+      #menu ul li {
+        padding: 20px;
+        scale: 0.9;
+      }
+      
+      #menu ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+      }
+  }

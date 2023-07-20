@@ -3,11 +3,6 @@ const menu = document.getElementById('menu');
 const sections = document.querySelectorAll('main section');
 const menuLinks = document.querySelectorAll('#menu a');
 
-// Mostrar sección "Inicio" al cargar la página
-/*document.addEventListener('DOMContentLoaded', () => {
-  toggleSection('inicio');
-});*/
-
 menuLinks.forEach(link => {
   link.addEventListener('click', (event) => {
     event.stopPropagation();
@@ -21,9 +16,6 @@ toggleButton.addEventListener('click', () => {
 
 function toggleMenu() {
   menu.classList.toggle('show');
-  sections.forEach((section) => {
-    section.classList.toggle('hidden');
-  });
   toggleButton.classList.toggle('open');
 }
 
