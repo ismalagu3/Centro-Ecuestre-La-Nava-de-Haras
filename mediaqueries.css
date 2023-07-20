@@ -1,0 +1,14 @@
+/* Estilos para dispositivos en orientación vertical */
+@media (orientation: portrait) {
+    body {
+      font-size: 16px;
+    }
+  }
+  
+  /* Estilos para dispositivos en orientación horizontal */
+  @media (orientation: landscape) {
+    body {
+      font-size: 20px;
+    }
+  }
+  

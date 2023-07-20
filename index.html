@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Centro de Hípica</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
   <header>
@@ -15,22 +16,26 @@
       <span></span>
     </button>
 
+    <!-- Menú de navegación -->
     <nav id="menu">
       <ul>
-        <li><a href="#" onclick="toggleSection('inicio')">Inicio</a></li>
-        <li><a href="#" onclick="toggleSection('sobre-nosotros')">Sobre Nosotros</a></li>
-        <li><a href="#" onclick="toggleSection('servicios')">Servicios</a></li>
-        <li><a href="#" onclick="toggleSection('clases')">Clases de Equitación</a></li>
-        <li><a href="#" onclick="toggleSection('instalaciones')">Instalaciones</a></li>
-        <li><a href="#" onclick="toggleSection('contacto')">Contacto</a></li>
+        <li><a href="#" class="show">Inicio</a></li>
+        <li><a href="#">Sobre Nosotros</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Clases de Equitación</a></li>
+        <li><a href="#">Instalaciones</a></li>
+        <li><a href="#">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Menú de navegación -->
-
-
   <main>
+    <section id="inicio" class="show">
+      <!-- Contenido de la sección Inicio -->
+      <h2>Inicio</h2>
+      <p>Bienvenidos a nuestro Centro de Hípica, donde nos apasiona compartir nuestra pasión por los caballos con todos nuestros visitantes.</p>
+    </section>
+
     <section id="sobre-nosotros">
       <!-- Contenido de la sección Sobre Nosotros -->
       <h2>Sobre Nosotros</h2>

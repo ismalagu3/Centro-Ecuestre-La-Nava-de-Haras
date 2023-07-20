@@ -3,9 +3,14 @@ const menu = document.getElementById('menu');
 const sections = document.querySelectorAll('main section');
 const menuLinks = document.querySelectorAll('#menu a');
 
+// Mostrar sección "Inicio" al cargar la página
+/*document.addEventListener('DOMContentLoaded', () => {
+  toggleSection('inicio');
+});*/
+
 menuLinks.forEach(link => {
   link.addEventListener('click', (event) => {
-    event.stopPropagation(); // Detenemos la propagación del evento para evitar que se active el clic en el botón de menú
+    event.stopPropagation();
     toggleMenu();
   });
 });
@@ -14,37 +19,6 @@ toggleButton.addEventListener('click', () => {
   toggleMenu();
 });
 
-function toggleSection(sectionId) {
-  const section = document.getElementById(sectionId);
-  if (section.classList.contains('show')) {
-    // Ocultar sección con efecto fade out
-    section.classList.remove('show');
-    section.classList.add('hide');
-    setTimeout(() => {
-      section.style.display = 'none';
-      section.classList.remove('hide');
-    }, 300); // Esperamos 200ms (duración de la animación fade out) antes de ocultar la sección
-  } else {
-    // Ocultar todas las secciones antes de mostrar la seleccionada
-    sections.forEach((section) => {
-      if (section.classList.contains('show')) {
-        section.classList.remove('show');
-        section.classList.add('hide');
-        setTimeout(() => {
-          section.style.display = 'none';
-          section.classList.remove('hide');
-        }, 300); // Esperamos 300ms (duración de la animación fade out) antes de ocultar la sección
-      }
-    });
-
-      setTimeout(() => {
-        section.style.display = 'block';
-        section.classList.add('show');
-      }, 300);
-    //}
-  }
-}
-
 function toggleMenu() {
   menu.classList.toggle('show');
   sections.forEach((section) => {
@@ -52,3 +26,15 @@ function toggleMenu() {
   });
   toggleButton.classList.toggle('open');
 }
+
+let as = document.querySelectorAll('ul li a');
+let sectiones = document.querySelectorAll('main section');
+
+as.forEach((a, veces) => {
+  a.addEventListener('click', ()=>{
+    sectiones.forEach((section)=>{
+      section.classList.remove('show');
+    })
+    sectiones[veces].classList.add('show');
+  })
+});

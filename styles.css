@@ -63,7 +63,6 @@ main section.hidden {
 }
 
 /* Mostrar sección con efecto fade in */
-/* Mostrar sección al hacer clic en su enlace correspondiente */
 section.show {
   display: block; /* Mostramos la sección cuando tiene la clase 'show' */
   animation: fadeIn 0.3s ease;
@@ -194,4 +193,21 @@ footer {
 #toggleMenu.open span:nth-child(3) {
   background-color: #bdbdbd;
   transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Botón para volver al inicio */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#backToTop:hover {
+  background-color: #555;
 }
