@@ -1,11 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro Ecuestre La Nava de Haras</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro de Hípica</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+  <header>
+    <h1>Centro de Hípica</h1>
+    <button id="toggleMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="menu">
+      <ul>
+        <li><a href="#" onclick="toggleSection('inicio')">Inicio</a></li>
+        <li><a href="#" onclick="toggleSection('sobre-nosotros')">Sobre Nosotros</a></li>
+        <li><a href="#" onclick="toggleSection('servicios')">Servicios</a></li>
+        <li><a href="#" onclick="toggleSection('clases')">Clases de Equitación</a></li>
+        <li><a href="#" onclick="toggleSection('instalaciones')">Instalaciones</a></li>
+        <li><a href="#" onclick="toggleSection('contacto')">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Menú de navegación -->
+
+
+  <main>
+    <section id="sobre-nosotros">
+      <!-- Contenido de la sección Sobre Nosotros -->
+      <h2>Sobre Nosotros</h2>
+      <p>Bienvenidos a nuestro Centro de Hípica, donde nos apasiona compartir nuestra pasión por los caballos con todos nuestros visitantes.</p>
+      <p>Nuestra misión es proporcionar experiencias inolvidables, enseñar equitación de calidad y fomentar el amor y el respeto por estos majestuosos animales.</p>
+    </section>
+
+    <section id="servicios">
+      <!-- Contenido de la sección Servicios -->
+      <h2>Servicios</h2>
+      <div class="service">
+        <h3>Clases de Equitación</h3>
+        <p>Disfruta de nuestras clases de equitación con instructores altamente calificados.</p>
+        <p>Precio: $50 por sesión de una hora.</p>
+      </div>
+      <div class="service">
+        <h3>Paseos a Caballo</h3>
+        <p>Recorre los senderos naturales de nuestro centro de hípica con nuestros paseos a caballo.</p>
+        <p>Precio: $30 por paseo de 45 minutos.</p>
+      </div>
+    </section>
+
+    <section id="clases">
+      <!-- Contenido de la sección Clases de Equitación -->
+      <h2>Clases de Equitación</h2>
+      <p>En nuestras clases de equitación, aprenderás las técnicas básicas de montar a caballo y mejorarás tus habilidades de equitación.</p>
+      <p>Nuestros instructores certificados te guiarán y te brindarán una experiencia segura y enriquecedora.</p>
+    </section>
+
+    <section id="instalaciones">
+      <!-- Contenido de la sección Instalaciones -->
+      <h2>Instalaciones</h2>
+      <p>Nuestras instalaciones están diseñadas para proporcionar comodidad y seguridad tanto a los caballos como a los jinetes.</p>
+      <p>Contamos con establos espaciosos, pistas de entrenamiento y áreas de descanso para los caballos, así como vestuarios y áreas de observación para los visitantes.</p>
+    </section>
+
+    <section id="contacto">
+      <!-- Contenido de la sección Contacto -->
+      <h2>Contacto</h2>
+      <p>Ponte en contacto con nosotros para obtener más información sobre nuestros servicios y reservas.</p>
+      <p>¡Esperamos verte pronto en nuestro Centro de Hípica!</p>
+      <p>Dirección: Calle de los Caballos, Número 123, Ciudad Hípica</p>
+      <p>Teléfono: 123-456-7890</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Dirección: Calle de los Caballos, Número 123, Ciudad Hípica</p>
+    <p>Teléfono: 123-456-7890</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

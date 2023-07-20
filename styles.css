@@ -1,0 +1,197 @@
+/* Estilos generales */
+html{
+  width: auto;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  font-size: 1.4rem;
+  background-color: rgb(209, 209, 209);
+  display: inline-block;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav ul li a:hover {
+  color: #555;
+}
+
+main {
+  padding: 20px;
+  flex: 1;
+}
+
+main section {
+  display: none; /* Ocultamos las secciones por defecto */
+}
+
+main section.hidden {
+  opacity: 0;
+  pointer-events: none; /* Evita interacción con los elementos ocultos */
+  height: 0; /* Ajustamos la altura a 0 para evitar espacio vacío */
+  padding: 0; /* Eliminamos el padding para evitar espacio vacío */
+  overflow: hidden; /* Ocultamos contenido que exceda la altura 0 */
+}
+
+/* Mostrar sección con efecto fade in */
+/* Mostrar sección al hacer clic en su enlace correspondiente */
+section.show {
+  display: block; /* Mostramos la sección cuando tiene la clase 'show' */
+  animation: fadeIn 0.3s ease;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Ocultar sección con efecto fade out */
+section.hide {
+  animation: fadeOut 0.3s ease;
+}
+
+/* Animaciones de fade in y fade out */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+}
+
+/* Estilos para el menú desplegable */
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  transition: width 0.5s ease;
+  display: flex; /* Utilizamos flexbox para centrar el contenido verticalmente */
+  align-items: center; /* Centramos verticalmente el contenido */
+  justify-content: center; /* Centramos horizontalmente el contenido */
+  z-index: 1;
+  align-items: center;
+  flex-direction: column;
+}
+
+#menu.show {
+  width: 100%;
+  z-index: 1;
+}
+
+#menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center; /* Alineamos horizontalmente el contenido de la lista */
+}
+
+#menu ul li {
+  padding: 20px;
+}
+
+#menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+ 
+/* Estilos para el botón con el ícono de hamburguesa */
+#toggleMenu {
+  position: relative;
+  display: block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  z-index: 11;
+  transition: background-color 1s linear;
+}
+
+/* Ocultar el estilo por defecto del botón */
+#toggleMenu::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* Estilo del botón de hamburguesa */
+#toggleMenu span {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin-bottom: 6px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 11;
+}
+
+/* Anima el botón de hamburguesa cuando se despliega el menú */
+#toggleMenu.open span:nth-child(2) {
+  background-color: #bdbdbd;
+  opacity: 0;
+}
+
+#toggleMenu.open span:nth-child(1) {
+  background-color: #bdbdbd;
+  transform: translateY(10px) rotate(45deg);
+}
+
+#toggleMenu.open span:nth-child(3) {
+  background-color: #bdbdbd;
+  transform: translateY(-10px) rotate(-45deg);
+}
