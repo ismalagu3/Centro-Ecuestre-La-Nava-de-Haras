@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Centro de Hípica</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="mediaqueries.css">
+  <link rel="stylesheet" href="./CSS/styles.css">
+  <link rel="stylesheet" href="./CSS/mediaqueries.css">
 </head>
 <body>
   <header>
@@ -88,6 +88,6 @@
     <p>Teléfono: 123-456-7890</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="./JS/script.js"></script>
 </body>
 </html>
