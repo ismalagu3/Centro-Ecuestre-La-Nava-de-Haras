@@ -199,3 +199,20 @@ footer {
   background-color: #bdbdbd;
   transform: translateY(-10px) rotate(-45deg);
 }
+
+#servicios{
+  grid-template-columns: auto auto auto;
+}
+
+.service{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 7%;
+  column-gap: 10%;
+}
+
+article{
+  border: solid black 2px;
+  background-color: aqua;
+  text-align: center;
+}

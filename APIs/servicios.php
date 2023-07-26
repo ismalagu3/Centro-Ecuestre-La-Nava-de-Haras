@@ -1,6 +1,15 @@
 <?php
-include 'bbdd.php';ç
+//error_reporting(0);
+include 'bbdd.php';
 $mysqli;
-$consulta = "SELECT nombre_servicio from servicios";
+$consulta = "SELECT servicio, descripcion, precio from servicios where servicio is not null";
 $res=$mysqli->query($consulta);
+$fila=$res->fetch_assoc();
+
+$datos = array();
+while($fila){
+    $servicio = $fila["servicio"];
+    $datos[]=$fila;
+    $fila=$res->fetch_assoc();
+}
 ?>

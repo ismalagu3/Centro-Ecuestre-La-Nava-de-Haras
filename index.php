@@ -1,3 +1,8 @@
+<?php
+error_reporting(0);
+include './APIs/servicios.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,7 +14,7 @@
 </head>
 <body>
   <header>
-    <h1>Centro de Hípica</h1>
+    <h1>Centro Ecuestre</h1>
     <button id="toggleMenu">
       <span></span>
       <span></span>
@@ -47,17 +52,18 @@
     <section id="servicios">
       <!-- Contenido de la sección Servicios -->
       <h2>Servicios</h2>
-      <div class="service">
-        <h3>Clases de Equitación</h3>
-        <p>Disfruta de nuestras clases de equitación con instructores altamente calificados.</p>
-        <p>Precio: $50 por sesión de una hora.</p>
+      <div class="service">        
+        <?php
+          foreach ($datos as $dato) {
+            echo "<article>";
+            echo "<h3>".$dato['servicio']."</h3>";
+            echo "<p>".$dato['descripcion']."</p>";
+            echo "<p>".$dato['precio']."</p>";
+            echo "</article>";
+          }
+        ?>
       </div>
-      <div class="service">
-        <h3>Paseos a Caballo</h3>
-        <p>Recorre los senderos naturales de nuestro centro de hípica con nuestros paseos a caballo.</p>
-        <p>Precio: $30 por paseo de 45 minutos.</p>
-      </div>
-    </section>
+    </section>  
 
     <section id="clases">
       <!-- Contenido de la sección Clases de Equitación -->
